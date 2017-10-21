@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmssName": {
+      "value": "JBVMSS"
+    },
+    "instanceCount": {
+      "value": 2
+    },
+    "adminUsername": {
+      "value": "JBadmin"
+    },
+    "adminPassword": {
+      "value": ""
+    },
+    "vmSize": {
+      "value": "Standard_D2_v3"
+    },
+    "TrendMicroDSMname": {
+      "value": "agents.deepsecurity.trendmicro.com"
+    },
+    "TrendMicroDSMport": {
+      "value": "443"
+    },
+    "TrendMicroTenantID": {
+      "value": ""
+    },
+    "TrendMicroTenantPassword": {
+      "value": ""
+    },
+    "TrendMicroPolicyNameorID": {
+      "value": ""
+    }
+  }
+}
