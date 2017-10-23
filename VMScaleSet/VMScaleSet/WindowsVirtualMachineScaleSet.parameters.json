@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "vmssName": {
-      "value": "JBVMSS"
+      "value": "JBVMSSOMS"
     },
     "instanceCount": {
       "value": 2
@@ -12,10 +12,15 @@
       "value": "JBadmin"
     },
     "adminPassword": {
-      "value": ""
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/f5a6b6bf-605c-4244-928a-e79277301ec4/resourceGroups/RG-AzureKeyVault/providers/Microsoft.KeyVault/vaults/JB-E"
+        },
+        "secretName": "JBVMSSAdmin"
+      }
     },
     "vmSize": {
-      "value": "Standard_D2_v3"
+      "value": "Standard_D2_v2"
     },
     "TrendMicroDSMname": {
       "value": "agents.deepsecurity.trendmicro.com"
@@ -24,10 +29,10 @@
       "value": "443"
     },
     "TrendMicroTenantID": {
-      "value": ""
+      "value": "58ADFBD4-E48C-4D6A-EC10-19C1B7BA89EA"
     },
     "TrendMicroTenantPassword": {
-      "value": ""
+      "value": "4DB2D029-14CD-657A-E884-71D7061CF190"
     },
     "TrendMicroPolicyNameorID": {
       "value": ""

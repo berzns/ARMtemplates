@@ -47,6 +47,35 @@
       "metadata": {
         "description": "Administrator password on all VMs"
       }
+    },
+    "TrendMicroDSMname": {
+      "type": "string",
+      "defaultValue": "agents.deepsecurity.trendmicro.com"
+    },
+    "TrendMicroDSMport": {
+      "type": "string",
+      "defaultValue": "443"
+    },
+    "TrendMicroTenantID": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Tenant ID as a GUID"
+      }
+    },
+    "TrendMicroTenantPassword": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "GUID as a password"
+      }
+    },
+    "TrendMicroPolicyNameorID": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "Pilicy GUID. Optional."
+      }
     }
   },
   "variables": {
@@ -556,21 +585,16 @@
                   "typeHandlerVersion": "10.0",
                   "autoUpgradeMinorVersion": true,
                   "settings": {
-                    "DSMname": "agents.deepsecurity.trendmicro.com",
-                    "DSMport": "443",
-                    "policyNameorID": ""
+                    "DSMname": "[parameters('TrendMicroDSMname')]",
+                    "DSMport": "[parameters('TrendMicroDSMport')]",
+                    "policyNameorID": "[parameters('TrendMicroPolicyNameorID')]"
                   },
                   "protectedSettings": {
-                    "tenantID": "58ADFBD4-E48C-4D6A-EC10-19C1B7BA89EA",
-                    "tenantPassword": "4DB2D029-14CD-657A-E884-71D7061CF190"
+                    "tenantID": "[parameters('TrendMicroTenantID')]",
+                    "tenantPassword": "[parameters('TrendMicroTenantPassword')]"
                   }
                 }
               }
-
-
-
-
-
             ]
           }
         }
